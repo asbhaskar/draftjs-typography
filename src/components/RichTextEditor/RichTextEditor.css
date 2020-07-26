@@ -6,6 +6,7 @@
     padding: 15px;
     width:50%;
     margin: auto;
+    margin-bottom: 20px;
   }
   
   .RichEditor-editor {
@@ -92,4 +93,11 @@
 .font-size-option:hover {
     background: #F0F0F0;
     cursor: pointer;
+}
+
+.search-and-replace{
+  margin: auto;
+  width:50%;
+  display:flex;
+  justify-content:space-around;
 }

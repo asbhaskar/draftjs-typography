@@ -7,21 +7,20 @@ class Textbox extends Component{
         editor: ''
     }
 
+    //Necessary to pass editor state from child to parent
     update = (editorState) => {
-        console.log('child editor state change', editorState);
         this.setState({editor: editorState})
-      }
+    }
 
     render(){
         return(
-            <RichTextEditor
-                  content=""
-                  editContent=""
-                  editor={EditorState.createEmpty()}
-                  key={"Editor"}
-                  spellCheck={true} 
-                  update={this.update}
-                />
+            <React.Fragment>
+                <RichTextEditor
+                    editor={EditorState.createEmpty()}
+                    key={"Editor"}
+                    spellCheck={true} 
+                    update={this.update} />
+            </React.Fragment>
         );
     }
 }
